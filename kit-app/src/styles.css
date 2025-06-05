@@ -1,0 +1,17 @@
+button {
+	padding: 0.5rem 0.7rem;
+	border: none;
+	background-color: #fff;
+	color: green;
+	cursor: pointer;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 2rem;
+}
+h1 {
+	color: green;
+}
