@@ -23,8 +23,3 @@
     <hr>
     Fahrenheit: <input type="number" bind:value={temperature.fahrenheit}>
 </div>
-<style>
-    input {
-        padding: 0.7rem 1.5rem;
-    }
-</style>
