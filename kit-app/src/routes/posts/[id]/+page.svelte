@@ -2,19 +2,21 @@
     import '../../../styles.css'
 	import { goto } from '$app/navigation';
     import {page} from '$app/state'
+    let {data} = $props()
     let postID = Number(page.params.id)
     let post = $state()
     // @ts-ignore
-    async function getPost(id) {
-        if (postID > 0 && postID < 100) {
-            const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-            const p = await response.json()
-            post = p
-        } else post = 'The number of post must be between 1 and 99'
-    }
-    $effect(() => {
-        getPost(postID)
-    })
+    post = data.posts.filter((post => post.id === postID))[0]
+    // async function getPost(id) {
+    //     if (postID > 0 && postID < 100) {
+    //         const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    //         const p = await response.json()
+    //         post = p
+    //     } else post = 'The number of post must be between 1 and 99'
+    // }
+    // $effect(() => {
+    //     getPost(postID)
+    // })
     function gotoPosts() {
         goto(page.url.origin + '/' + 'posts')
     }
