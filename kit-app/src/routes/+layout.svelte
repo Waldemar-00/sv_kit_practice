@@ -3,7 +3,7 @@
 
     let {children} = $props()
     let selected = $state('')
-    const anchors = [{id: crypto.randomUUID(), title:''}, {id: crypto.randomUUID(), title:'bindable'}, {id: crypto.randomUUID(), title:'coin'}, {id: crypto.randomUUID(), title:'counter'}, {id: crypto.randomUUID(), title:'derived'}, {id: crypto.randomUUID(), title:'effect'}, {id: crypto.randomUUID(), title:'temperature'},  {id: crypto.randomUUID(), title:'posts'}, {id: crypto.randomUUID(), title:'postsviaserver'}, {id: crypto.randomUUID(), title: 'setheaders'}]
+    const anchors = [{id: crypto.randomUUID(), title:''}, {id: crypto.randomUUID(), title:'bindable'}, {id: crypto.randomUUID(), title:'coin'}, {id: crypto.randomUUID(), title:'counter'}, {id: crypto.randomUUID(), title:'derived'}, {id: crypto.randomUUID(), title:'effect'}, {id: crypto.randomUUID(), title:'temperature'},  {id: crypto.randomUUID(), title:'posts'}, {id: crypto.randomUUID(), title:'postsviaserver'}, {id: crypto.randomUUID(), title: 'setheaders'}, {id: crypto.randomUUID(), title: 'cookies'}]
     $effect(() => {
         goto(selected)
     })
